@@ -1,6 +1,9 @@
+"use client"
 import Link from 'next/link';
-import logo from './images/logo.svg'
+import logo from './images/logo-Damasco.png';
+import logopequeño from './images/logo-pequeno.png'
 import Image from 'next/image';
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
 
 const Navbar = () => {
     return (
@@ -16,7 +19,7 @@ const Navbar = () => {
             </Link>
 
             <div className="text-center">
-                <ul className="flex justify-center space-x-6 text-2xl ">
+                <ul className="flex justify-center space-x-3 px-5 lg:space-x-6 text-2xl ">
                     <li>
                         <Link href="/products">
                             <div className="text-white hover:underline">Productos</div>
@@ -28,17 +31,19 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/link3">
-                            <div className="text-white hover:underline">Ubicación</div>
-                        </Link>
-                    </li>
-                    <li>
                         <Link href="/link4">
-                            <div className="text-white hover:underline">+56998989898</div>
+                            <div className="text-white hover:underline">Compromiso de Calidad</div>
                         </Link>
                     </li>
                 </ul>
             </div>
+            <FloatingWhatsApp
+            accountName='Damasco'
+            phoneNumber='+56948995994'
+            statusMessage='tipicamente responde en 1 hora'
+            chatMessage='Hola, Bienvenido Damasco, Que te gustaría ordenar?'
+            avatar='/images/logo-pequeno.png'
+            />
         </nav>
     );
 };

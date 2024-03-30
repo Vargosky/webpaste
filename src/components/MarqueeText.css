@@ -1,0 +1,30 @@
+/* MarqueeText.css */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    /* Ajusta el tamaño según necesites */
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+.marquee-content {
+    display: inline-block;
+    /* Asegúrate de que la velocidad de animación sea la adecuada para ti */
+    animation: marquee 35s linear infinite;
+    /* Ajusta el tamaño del texto según necesites */
+    font-size: 24px;
+    position: absolute;
+}
+
+/* Clave de la animación que mueve el texto de derecha a izquierda */
+@keyframes marquee {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: -100%;
+    }
+}

@@ -1,31 +1,12 @@
-"use_client"
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import MarqueeText from './MarqueeText';
 
-const RotatingText = ({ texts }) => {
-    const [index, setIndex] = useState(0);
-
-    const rotateText = () => {
-        setIndex((index + 1) % texts.length);
-    };
-
-    useEffect(() => {
-        const interval = setInterval(rotateText, 2000);
-        return () => clearInterval(interval);
-    }, [index]);
-
+const App = () => {
     return (
-        <div className="flex overflow-hidden text-xl font-semibold">
-            {texts.map((text, i) => (
-                <div
-                    key={i}
-                    className={`transition-opacity duration-1000 ${i === index ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform -translate-x-full'
-                        }`}
-                >
-                    {text}
-                </div>
-            ))}
+        <div>
+            <MarqueeText text="Este es un ejemplo de texto corriendo hacia la izquierda, como en los paneles LED." />
         </div>
     );
 };
 
-export default RotatingText;
+export default App;

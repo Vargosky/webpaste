@@ -8,7 +8,7 @@ const Page = ({listado}) => {
   let i=0;
   
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
       {console.log("entro")}
       {catalogo.map((producto, index) => (
         

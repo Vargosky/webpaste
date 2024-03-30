@@ -1,17 +1,13 @@
 import React from 'react';
 import ProductCard from '@/components/ProductCard';
-import { catalogoTorta, catalogoKutchen } from '../../data/products';
+import { catalogoKutchen } from '../../data/products';
 
-
-const catalogo = catalogoKutchen
-const Page = ({listado}) => {
+const Page = () => {
   let i=0;
-  
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {console.log("entro")}
-      {catalogo.map((producto, index) => (
-        
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      {catalogoKutchen.map((producto, index) => (
                 <ProductCard
                 key={i++}
                 images={producto.images}
@@ -21,7 +17,6 @@ const Page = ({listado}) => {
                 discount={producto.discount}
               />
       ))}
-   
     </div>
   );
 };

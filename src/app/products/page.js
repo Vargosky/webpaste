@@ -3,9 +3,12 @@ import Image from 'next/image';
 import banner from '../../components/images/Tradicion.png';
 import bannerLg from '../../components/images/Calidad.png';
 
+
+
+
 const Page = () => {
   return (
-    <div>
+    <div className='justify-center'>
       <Image
         className="rounded-2xl mx-auto lg:hidden"
         src={banner}
@@ -15,11 +18,11 @@ const Page = () => {
         priority
       />
       <Image
-        className="hidden lg:block"
-        src={bannerLg}
+        className="hidden lg:block mx-auto object-fill"
+        src={'/images/frontisB.png'}
         alt="imagencentral"
-        width={1300} // Ajusta el ancho según tus necesidades
-        height={500} // Ajusta la altura según tus necesidades
+        width={900} // Ajusta el ancho según tus necesidades
+        height={600} // Ajusta la altura según tus necesidades
         priority
       />
     </div>
